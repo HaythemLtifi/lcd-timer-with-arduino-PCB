@@ -1,8 +1,9 @@
 /*
-  Menu with voice and rotary encoder
+  code base on electrinoobs video
   http://www.electronoobs.com/eng_arduino_tut22.php
   http://www.youtube.com/c/ELECTRONOOBS
  */
+// this code is just for relais 1 and 4 but you can copy past to the rest , its not done yet but it half works
  
 #include <LiquidCrystal.h>
 #define buzzer 13        //Buzzer Pin
