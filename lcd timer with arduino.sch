@@ -124,15 +124,7 @@ D11
 Text GLabel 9800 5000 0    50   Input ~ 0
 D12
 Wire Wire Line
-	9500 4300 10600 4300
-Wire Wire Line
-	10600 4300 10600 4800
-Wire Wire Line
-	10600 4800 11000 4800
-Wire Wire Line
-	11000 4800 11000 6200
-Wire Wire Line
-	11000 6200 10600 6200
+	11000 6200 10750 6200
 $Comp
 L power:GND #PWR022
 U 1 1 600A99D2
@@ -164,7 +156,6 @@ Wire Wire Line
 	10750 5050 10750 4600
 Wire Wire Line
 	10750 4600 10200 4600
-NoConn ~ 10750 5350
 $Comp
 L power:VDD #PWR019
 U 1 1 600AE146
@@ -668,7 +659,6 @@ F 3 "http://www.wincomlcd.com/pdf/WC1602A-SFYLYHTC06.pdf" H 10900 5400 50  0001 
 	1    0    0    -1  
 $EndComp
 Connection ~ 10200 4600
-Connection ~ 10600 4800
 Wire Wire Line
 	9800 4900 9500 4900
 Wire Wire Line
@@ -685,13 +675,7 @@ F 3 "~" H 10750 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10600 5100 10600 5000
-Wire Wire Line
-	10600 5000 10900 5000
-Wire Wire Line
-	10900 5000 10900 5200
-Wire Wire Line
-	10600 5200 10600 6200
+	10600 5200 10600 5400
 $Comp
 L Device:D D3
 U 1 1 60098FD3
@@ -869,4 +853,35 @@ Wire Wire Line
 	2000 7100 2000 7150
 Wire Wire Line
 	1900 7100 2000 7100
+Wire Wire Line
+	10750 6200 10750 5350
+Connection ~ 10750 6200
+Wire Wire Line
+	10750 6200 10600 6200
+Wire Wire Line
+	9500 4300 11000 4300
+Wire Wire Line
+	11000 4300 11000 6200
+Wire Wire Line
+	10600 4800 10900 4800
+Wire Wire Line
+	10900 4800 10900 5200
+$Comp
+L Device:R R5
+U 1 1 604AD0CA
+P 10600 5550
+F 0 "R5" H 10670 5596 50  0000 L CNN
+F 1 "220" H 10670 5505 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 10530 5550 50  0001 C CNN
+F 3 "~" H 10600 5550 50  0001 C CNN
+	1    10600 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 5100 10600 5050
+Wire Wire Line
+	10600 5050 10750 5050
+Connection ~ 10750 5050
+Wire Wire Line
+	10600 5700 10600 6200
 $EndSCHEMATC
