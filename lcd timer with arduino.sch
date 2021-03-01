@@ -49,16 +49,14 @@ $EndComp
 $Comp
 L Transistor_BJT:2N3904 Q3
 U 1 1 60090CA6
-P 900 5800
-F 0 "Q3" H 1090 5846 50  0000 L CNN
-F 1 "2N3904" H 1090 5755 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 1100 5725 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 900 5800 50  0001 L CNN
-	1    900  5800
+P 2050 5800
+F 0 "Q3" H 2240 5846 50  0000 L CNN
+F 1 "2N3904" H 2240 5755 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 2250 5725 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 2050 5800 50  0001 L CNN
+	1    2050 5800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 5550 1850 5600
 $Comp
 L power:VDD #PWR011
 U 1 1 60099088
@@ -72,21 +70,6 @@ F 3 "" H 1850 5300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1850 5350 1850 5300
-$Comp
-L power:GND #PWR017
-U 1 1 6009E46E
-P 2800 4800
-F 0 "#PWR017" H 2800 4550 50  0001 C CNN
-F 1 "GND" H 2805 4627 50  0000 C CNN
-F 2 "" H 2800 4800 50  0001 C CNN
-F 3 "" H 2800 4800 50  0001 C CNN
-	1    2800 4800
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1250 5550 1000 5550
-Wire Wire Line
-	1000 5550 1000 5600
 $Comp
 L Device:R R3
 U 1 1 600A0261
@@ -116,18 +99,16 @@ Wire Wire Line
 $Comp
 L power:GND #PWR03
 U 1 1 600A1C12
-P 1000 6150
-F 0 "#PWR03" H 1000 5900 50  0001 C CNN
-F 1 "GND" H 1005 5977 50  0000 C CNN
-F 2 "" H 1000 6150 50  0001 C CNN
-F 3 "" H 1000 6150 50  0001 C CNN
-	1    1000 6150
+P 2150 6150
+F 0 "#PWR03" H 2150 5900 50  0001 C CNN
+F 1 "GND" H 2155 5977 50  0000 C CNN
+F 2 "" H 2150 6150 50  0001 C CNN
+F 3 "" H 2150 6150 50  0001 C CNN
+	1    2150 6150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1000 6150 1000 6000
-Wire Wire Line
-	1850 5600 1950 5600
+	2150 6150 2150 6000
 Wire Wire Line
 	2800 5000 2800 4800
 Text GLabel 9800 6000 0    50   Input ~ 0
@@ -227,7 +208,7 @@ Text GLabel 800  950  0    50   Input ~ 0
 +
 Text GLabel 800  1050 0    50   Input ~ 0
 -
-Text GLabel 1000 6050 0    50   Input ~ 0
+Text GLabel 2150 6050 0    50   Input ~ 0
 -
 Text GLabel 1150 5000 0    50   Input ~ 0
 +
@@ -249,7 +230,7 @@ Text GLabel 7550 5550 0    50   Input ~ 0
 dt
 Text GLabel 7550 5450 0    50   Input ~ 0
 clk
-Text GLabel 700  5800 0    50   Input ~ 0
+Text GLabel 1100 5550 0    50   Input ~ 0
 on1
 Text GLabel 7550 5350 0    50   Input ~ 0
 on2
@@ -297,16 +278,14 @@ $EndComp
 $Comp
 L Transistor_BJT:2N3904 Q4
 U 1 1 600CC51F
-P 950 7150
-F 0 "Q4" H 1140 7196 50  0000 L CNN
-F 1 "2N3904" H 1140 7105 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 1150 7075 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 950 7150 50  0001 L CNN
-	1    950  7150
+P 2200 7150
+F 0 "Q4" H 2390 7196 50  0000 L CNN
+F 1 "2N3904" H 2390 7105 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 2400 7075 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 2200 7150 50  0001 L CNN
+	1    2200 7150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1900 6900 1900 6950
 $Comp
 L power:VDD #PWR012
 U 1 1 600CC526
@@ -320,21 +299,6 @@ F 3 "" H 1900 6650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1900 6700 1900 6650
-$Comp
-L power:GND #PWR018
-U 1 1 600CC52D
-P 2850 6150
-F 0 "#PWR018" H 2850 5900 50  0001 C CNN
-F 1 "GND" H 2855 5977 50  0000 C CNN
-F 2 "" H 2850 6150 50  0001 C CNN
-F 3 "" H 2850 6150 50  0001 C CNN
-	1    2850 6150
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1300 6900 1050 6900
-Wire Wire Line
-	1050 6900 1050 6950
 $Comp
 L Device:R R4
 U 1 1 600CC535
@@ -364,25 +328,23 @@ Wire Wire Line
 $Comp
 L power:GND #PWR05
 U 1 1 600CC543
-P 1050 7500
-F 0 "#PWR05" H 1050 7250 50  0001 C CNN
-F 1 "GND" H 1055 7327 50  0000 C CNN
-F 2 "" H 1050 7500 50  0001 C CNN
-F 3 "" H 1050 7500 50  0001 C CNN
-	1    1050 7500
+P 2300 7500
+F 0 "#PWR05" H 2300 7250 50  0001 C CNN
+F 1 "GND" H 2305 7327 50  0000 C CNN
+F 2 "" H 2300 7500 50  0001 C CNN
+F 3 "" H 2300 7500 50  0001 C CNN
+	1    2300 7500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1050 7500 1050 7350
-Wire Wire Line
-	1900 6950 2000 6950
+	2300 7500 2300 7350
 Wire Wire Line
 	2850 6350 2850 6150
-Text GLabel 1050 7400 0    50   Input ~ 0
+Text GLabel 2300 7400 0    50   Input ~ 0
 -
 Text GLabel 1200 6350 0    50   Input ~ 0
 +
-Text GLabel 750  7150 0    50   Input ~ 0
+Text GLabel 1100 6900 0    50   Input ~ 0
 on2
 $Comp
 L Connector:Screw_Terminal_01x02 J4
@@ -432,19 +394,6 @@ F 3 "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf" H 1450 2900 50  00
 	1    0    0    -1  
 $EndComp
 $Comp
-L Transistor_BJT:2N3904 Q1
-U 1 1 600F4033
-P 800 3250
-F 0 "Q1" H 990 3296 50  0000 L CNN
-F 1 "2N3904" H 990 3205 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 1000 3175 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 800 3250 50  0001 L CNN
-	1    800  3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1750 3000 1750 3050
-$Comp
 L power:VDD #PWR09
 U 1 1 600F403A
 P 1750 2750
@@ -457,21 +406,6 @@ F 3 "" H 1750 2750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1750 2800 1750 2750
-$Comp
-L power:GND #PWR015
-U 1 1 600F4041
-P 2700 2250
-F 0 "#PWR015" H 2700 2000 50  0001 C CNN
-F 1 "GND" H 2705 2077 50  0000 C CNN
-F 2 "" H 2700 2250 50  0001 C CNN
-F 3 "" H 2700 2250 50  0001 C CNN
-	1    2700 2250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1150 3000 900  3000
-Wire Wire Line
-	900  3000 900  3050
 $Comp
 L Device:R R1
 U 1 1 600F4049
@@ -501,25 +435,21 @@ Wire Wire Line
 $Comp
 L power:GND #PWR01
 U 1 1 600F4057
-P 900 3600
-F 0 "#PWR01" H 900 3350 50  0001 C CNN
-F 1 "GND" H 905 3427 50  0000 C CNN
-F 2 "" H 900 3600 50  0001 C CNN
-F 3 "" H 900 3600 50  0001 C CNN
-	1    900  3600
+P 2050 3650
+F 0 "#PWR01" H 2050 3400 50  0001 C CNN
+F 1 "GND" H 2055 3477 50  0000 C CNN
+F 2 "" H 2050 3650 50  0001 C CNN
+F 3 "" H 2050 3650 50  0001 C CNN
+	1    2050 3650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	900  3600 900  3450
-Wire Wire Line
-	1750 3050 1900 3050
-Wire Wire Line
 	2700 2450 2700 2250
-Text GLabel 900  3500 0    50   Input ~ 0
+Text GLabel 2000 3600 0    50   Input ~ 0
 -
 Text GLabel 1050 2450 0    50   Input ~ 0
 +
-Text GLabel 600  3250 0    50   Input ~ 0
+Text GLabel 1050 3000 0    50   Input ~ 0
 on3
 $Comp
 L Connector:Screw_Terminal_01x02 j2
@@ -569,16 +499,14 @@ $EndComp
 $Comp
 L Transistor_BJT:2N3904 Q2
 U 1 1 600F407C
-P 850 4600
-F 0 "Q2" H 1040 4646 50  0000 L CNN
-F 1 "2N3904" H 1040 4555 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 1050 4525 50  0001 L CIN
-F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 850 4600 50  0001 L CNN
-	1    850  4600
+P 2000 4600
+F 0 "Q2" H 2190 4646 50  0000 L CNN
+F 1 "2N3904" H 2190 4555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 2200 4525 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 2000 4600 50  0001 L CNN
+	1    2000 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1800 4350 1800 4400
 $Comp
 L power:VDD #PWR010
 U 1 1 600F4083
@@ -592,21 +520,6 @@ F 3 "" H 1800 4100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1800 4150 1800 4100
-$Comp
-L power:GND #PWR016
-U 1 1 600F408A
-P 2750 3600
-F 0 "#PWR016" H 2750 3350 50  0001 C CNN
-F 1 "GND" H 2755 3427 50  0000 C CNN
-F 2 "" H 2750 3600 50  0001 C CNN
-F 3 "" H 2750 3600 50  0001 C CNN
-	1    2750 3600
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1200 4350 950  4350
-Wire Wire Line
-	950  4350 950  4400
 $Comp
 L Device:R R2
 U 1 1 600F4092
@@ -636,25 +549,23 @@ Wire Wire Line
 $Comp
 L power:GND #PWR02
 U 1 1 600F40A0
-P 950 4950
-F 0 "#PWR02" H 950 4700 50  0001 C CNN
-F 1 "GND" H 955 4777 50  0000 C CNN
-F 2 "" H 950 4950 50  0001 C CNN
-F 3 "" H 950 4950 50  0001 C CNN
-	1    950  4950
+P 2100 4950
+F 0 "#PWR02" H 2100 4700 50  0001 C CNN
+F 1 "GND" H 2105 4777 50  0000 C CNN
+F 2 "" H 2100 4950 50  0001 C CNN
+F 3 "" H 2100 4950 50  0001 C CNN
+	1    2100 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  4950 950  4800
-Wire Wire Line
-	1800 4400 1900 4400
+	2100 4950 2100 4800
 Wire Wire Line
 	2750 3800 2750 3600
-Text GLabel 950  4850 0    50   Input ~ 0
+Text GLabel 2100 4850 0    50   Input ~ 0
 -
 Text GLabel 1100 3800 0    50   Input ~ 0
 +
-Text GLabel 650  4600 0    50   Input ~ 0
+Text GLabel 1050 4350 0    50   Input ~ 0
 on4
 $Comp
 L Connector:Screw_Terminal_01x02 J2
@@ -787,56 +698,52 @@ U 1 1 60098FD3
 P 1900 2900
 F 0 "D3" V 1854 2980 50  0000 L CNN
 F 1 "D" V 1945 2980 50  0000 L CNN
-F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 1900 2900 50  0001 C CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 1900 2900 50  0001 C CNN
 F 3 "~" H 1900 2900 50  0001 C CNN
 	1    1900 2900
 	0    1    1    0   
 $EndComp
-Connection ~ 1900 3050
 Wire Wire Line
-	1900 3050 2700 3050
+	1900 3050 2050 3050
 $Comp
 L Device:D D4
 U 1 1 6009A44D
 P 1900 4250
 F 0 "D4" V 1854 4330 50  0000 L CNN
 F 1 "D" V 1945 4330 50  0000 L CNN
-F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 1900 4250 50  0001 C CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 1900 4250 50  0001 C CNN
 F 3 "~" H 1900 4250 50  0001 C CNN
 	1    1900 4250
 	0    1    1    0   
 $EndComp
-Connection ~ 1900 4400
 Wire Wire Line
-	1900 4400 2750 4400
+	1900 4400 2100 4400
 $Comp
 L Device:D D1
 U 1 1 6009A88D
 P 1950 5450
 F 0 "D1" V 1904 5530 50  0000 L CNN
 F 1 "D" V 1995 5530 50  0000 L CNN
-F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 1950 5450 50  0001 C CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 1950 5450 50  0001 C CNN
 F 3 "~" H 1950 5450 50  0001 C CNN
 	1    1950 5450
 	0    1    1    0   
 $EndComp
-Connection ~ 1950 5600
 Wire Wire Line
-	1950 5600 2800 5600
+	1950 5600 2150 5600
 $Comp
 L Device:D D2
 U 1 1 6009ACF0
 P 2000 6800
 F 0 "D2" V 1954 6880 50  0000 L CNN
 F 1 "D" V 2045 6880 50  0000 L CNN
-F 2 "Diode_THT:D_T-1_P5.08mm_Horizontal" H 2000 6800 50  0001 C CNN
+F 2 "Diode_THT:D_T-1_P10.16mm_Horizontal" H 2000 6800 50  0001 C CNN
 F 3 "~" H 2000 6800 50  0001 C CNN
 	1    2000 6800
 	0    1    1    0   
 $EndComp
-Connection ~ 2000 6950
 Wire Wire Line
-	2000 6950 2850 6950
+	2000 6950 2300 6950
 Wire Wire Line
 	2000 6650 1900 6650
 Connection ~ 1900 6650
@@ -866,4 +773,100 @@ Wire Wire Line
 	6800 6100 6800 6150
 Wire Wire Line
 	6800 5950 7550 5950
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 600F4033
+P 1950 3350
+F 0 "Q1" H 2140 3396 50  0000 L CNN
+F 1 "2N3904" H 2140 3305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92L_Inline_Wide" H 2150 3275 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 1950 3350 50  0001 L CNN
+	1    1950 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 3000 1750 3350
+$Comp
+L power:VDD #PWR0101
+U 1 1 603E87E2
+P 2850 6150
+F 0 "#PWR0101" H 2850 6000 50  0001 C CNN
+F 1 "VDD" H 2865 6323 50  0000 C CNN
+F 2 "" H 2850 6150 50  0001 C CNN
+F 3 "" H 2850 6150 50  0001 C CNN
+	1    2850 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0102
+U 1 1 603E8CA1
+P 2800 4800
+F 0 "#PWR0102" H 2800 4650 50  0001 C CNN
+F 1 "VDD" H 2815 4973 50  0000 C CNN
+F 2 "" H 2800 4800 50  0001 C CNN
+F 3 "" H 2800 4800 50  0001 C CNN
+	1    2800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0103
+U 1 1 603E9199
+P 2750 3600
+F 0 "#PWR0103" H 2750 3450 50  0001 C CNN
+F 1 "VDD" H 2765 3773 50  0000 C CNN
+F 2 "" H 2750 3600 50  0001 C CNN
+F 3 "" H 2750 3600 50  0001 C CNN
+	1    2750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0104
+U 1 1 603E95C7
+P 2700 2250
+F 0 "#PWR0104" H 2700 2100 50  0001 C CNN
+F 1 "VDD" H 2715 2423 50  0000 C CNN
+F 2 "" H 2700 2250 50  0001 C CNN
+F 3 "" H 2700 2250 50  0001 C CNN
+	1    2700 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 3150 2050 3050
+Connection ~ 2050 3050
+Wire Wire Line
+	2050 3050 2700 3050
+Wire Wire Line
+	2050 3550 2050 3600
+Wire Wire Line
+	2000 3600 2050 3600
+Connection ~ 2050 3600
+Wire Wire Line
+	2050 3600 2050 3650
+Wire Wire Line
+	1050 3000 1150 3000
+Connection ~ 2150 5600
+Wire Wire Line
+	2150 5600 2800 5600
+Connection ~ 2100 4400
+Wire Wire Line
+	2100 4400 2750 4400
+Wire Wire Line
+	1100 6900 1300 6900
+Wire Wire Line
+	1100 5550 1250 5550
+Wire Wire Line
+	1050 4350 1200 4350
+Wire Wire Line
+	1900 7100 1900 6900
+Wire Wire Line
+	1850 5800 1850 5550
+Wire Wire Line
+	1800 4600 1800 4350
+Connection ~ 2300 6950
+Wire Wire Line
+	2300 6950 2850 6950
+Wire Wire Line
+	2000 7100 2000 7150
+Wire Wire Line
+	1900 7100 2000 7100
 $EndSCHEMATC
