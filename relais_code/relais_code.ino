@@ -1,9 +1,8 @@
 /*
-  code base on electrinoobs video
+  Menu with voice and rotary encoder
   http://www.electronoobs.com/eng_arduino_tut22.php
   http://www.youtube.com/c/ELECTRONOOBS
  */
-// this code is just for relais 1 and 4 but you can copy past to the rest , its not done yet but it half works
  
 #include <LiquidCrystal.h>
 #define buzzer 13        //Buzzer Pin
@@ -13,10 +12,6 @@
 
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
 LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
-
-
-
-
 
 //Variables for the menu encoder
 int counter = 0; 
@@ -33,18 +28,18 @@ int pushed = 0;
 
 //The pin for the push button
 #define push 10
-//Vectors for musical note and arrow
+//Vectors for  arrow
 
 uint8_t arrow[8] = {0x0, 0x04 ,0x06, 0x1f, 0x06, 0x04, 0x00, 0x00};
 
 void setup() {
-  pinMode (push,INPUT);       //Define the pin as input
+  pinMode (push,INPUT);       
   pinMode (relais1,OUTPUT);
   pinMode (relais2,OUTPUT);
   pinMode (buzzer,OUTPUT);
   
-    lcd.begin (16,2);                  //Init the LCD
-            //Activate backlight
+  lcd.begin (16,2);                  //Init the LCD
+            
 
   lcd.createChar(1, arrow);   //Create the arrow symbol
   lcd.home();                 //Home the LCD
@@ -1079,7 +1074,48 @@ if(digitalRead(push)==0)
         lcd.setCursor(0,0);
         lcd.print("relais 2,1 on");
         lcd.setCursor(0,1);  
-        lcd.print("      not configured yet       ");
+        
+        if (time1 >= time2){
+          lcd.print("T1=");
+          lcd.print(time1);
+          lcd.print("  ");
+          lcd.print("T2=");
+          lcd.print(time2);
+          digitalWrite(relais1,LOW);
+          digitalWrite(relais2,LOW);
+          delay((time2*60000));
+          digitalWrite(relais2,HIGH);
+          lcd.clear();
+          lcd.setCursor(0,0);
+          lcd.print("relais 1 on");
+          lcd.setCursor(0,1);
+          lcd.print("T1=");
+          lcd.print(time1-time2);
+          delay((time1*60000)-(time2*60000));
+          digitalWrite(relais1,LOW);
+       
+        }
+        else if (time2 >= time1){
+          lcd.print("T1=");
+          lcd.print(time1);
+          lcd.print("  ");
+          lcd.print("T2=");
+          lcd.print(time2);
+          digitalWrite(relais1,LOW);
+          digitalWrite(relais2,LOW);
+          delay((time1*60000));
+          digitalWrite(relais1,HIGH);
+          lcd.clear();
+          lcd.setCursor(0,0);
+          lcd.print("relais 2 on");
+          lcd.setCursor(0,1);
+          lcd.print("T2=");
+          lcd.print(time2-time1);
+          delay((time2*60000)-(time1*60000));
+          digitalWrite(relais2,LOW);
+       
+        }
+        
         tintin();
         delay(1000);
        }
@@ -2018,33 +2054,29 @@ if(submenu == 0 && Ready==1)
 
 void tintin(){
   digitalWrite(buzzer,1);
+  digitalWrite(relais1,HIGH);
+  digitalWrite(relais2,HIGH);
   delay(100);
   digitalWrite(buzzer,0);
+  digitalWrite(relais1,HIGH);
+  digitalWrite(relais2,HIGH);
   delay(100);
-    digitalWrite(buzzer,1);
-  delay(100);
-  digitalWrite(buzzer,0);
-  delay(100);
-    digitalWrite(buzzer,1);
-  delay(100);
-  digitalWrite(buzzer,0);
-  delay(100);
-    digitalWrite(buzzer,1);
+  digitalWrite(buzzer,1);
+  digitalWrite(relais1,HIGH);
+  digitalWrite(relais2,HIGH);
   delay(100);
   digitalWrite(buzzer,0);
+  digitalWrite(relais1,HIGH);
+  digitalWrite(relais2,HIGH);
   delay(100);
-    digitalWrite(buzzer,1);
-  delay(100);
+  digitalWrite(buzzer,1);
+  digitalWrite(relais1,HIGH);
+  digitalWrite(relais2,HIGH);
   digitalWrite(buzzer,0);
+  digitalWrite(relais1,HIGH);
+  digitalWrite(relais2,HIGH);
   delay(100);
-    digitalWrite(buzzer,1);
-  delay(100);
-  digitalWrite(buzzer,0);
-  delay(100);
-    digitalWrite(buzzer,1);
-  delay(100);
-  digitalWrite(buzzer,0);
-  delay(100);
+
 }
 
 
